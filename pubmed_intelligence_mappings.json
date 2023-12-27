@@ -1,0 +1,32 @@
+{
+  "mappings": {
+    "properties": {
+      "Abstract": {
+        "type": "text"
+      },
+      "ArticleDate": {
+        "type": "date",
+        "format": "yyyy/MM/dd"
+      },
+      "Authors": {
+        "type": "keyword"
+      },
+      "Journal": {
+        "type": "text"
+      },
+      "Keywords": {
+        "type": "keyword"
+      },
+      "PMID": {
+        "type": "keyword"
+      },
+      "PubDateEDAT": {
+        "type": "date",
+        "format": "yyyy/MM/dd"
+      },
+      "Title": {
+        "type": "text"
+      }
+    }
+  }
+}

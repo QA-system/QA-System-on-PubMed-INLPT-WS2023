@@ -1,9 +1,10 @@
-# QA-System-INLPT-WS2023
+# QA-System-on-PubMed-INLPT-WS2023
 
 ### Group members:
-Xiaoqin Cai: @xiaoqingcai99  
-Qiaowen Hu: @QiaoqiaoHW  
-Binwu Wang: @BinwuWang  
+Xiaoqin Cai: [@xiaoqingcai99](https://github.com/xiaoqingcai99)    
+Qiaowen Hu: [@QiaoqiaoHW](https://github.com/QiaoqiaoHW)  
+Binwu Wang: [@BinwuWang](https://github.com/BinwuWang)  
+Wenzhuo Chen: [@Wenzhuo321](https://github.com/Wenzhuo321)
 
 ### Topic
 Question Answering (QA) system：Use the dataset provided to create a system to answer questions about our data in natural language.   
