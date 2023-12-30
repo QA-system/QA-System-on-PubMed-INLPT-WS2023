@@ -1,6 +1,6 @@
 from opensearchpy import OpenSearch
 
-from config import host,port,username,password
+from .config import host,port,username,password
 
 client = OpenSearch(hosts = [{'host': host, 'port': port}],
                         http_auth =(username, password),
