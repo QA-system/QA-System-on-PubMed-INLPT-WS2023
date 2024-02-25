@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}QA page{% endblock %}
+{% block head %}
+   <link rel="stylesheet" href="{{ url_for('static',filename= 'css/baseinfo.css') }}">
+
+    <script type="text/javascript">
+        document.write("<scr"+"ipt src=\"/static/js/layout-base.js\"></sc"+"ript>")
+    </script>
+    <script type="text/javascript">
+        document.write("<scr"+"ipt src=\"/static/js/avsdf-base.js\"></sc"+"ript>")
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static',filename= 'css/font-awesome.min.css') }}">
+    <!--
+
+   <script src="/static/js/cytoscape-cola.js"></script>-->
+
+    <link rel="stylesheet" href="{{ url_for('static',filename= 'css/jquery.qtip.css')}}">
+
+
+   <!--<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+
+{% endblock %}
+
+{% block main %}
+    <div id="coverage">
+    <div class="tcaption" style="color:white">
+
+       <div class="tab-content">
+           <!-- {% for message in get_flashed_messages(1) %}
+                <div class="alert alert-warning">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                {{ message }}
+                </div>
+            {% endfor %} -->
+
+             <h3 class="title" style="color:white">Chatbot</h3>
+             <table class="table table-bordered table-hover">
+                <tbody>
+                  <tr>
+                      <td  class="zx" >Question</td>
+                      <td>{{ question }}</td>
+                      
+                  </tr>
+
+                  <tr>
+                      <td class="zx">Answer</td>
+                      <td>{{ answer }}</td>
+                  </tr>
+                  
+                </tbody>
+             </table>
+
+
+
+
+       </div>
+    </div>
+    </div>
+{% endblock %}

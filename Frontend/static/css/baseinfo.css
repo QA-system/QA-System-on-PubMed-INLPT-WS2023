@@ -1,0 +1,50 @@
+h3{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.zx{
+    font-weight: bolder;
+}
+
+.input-group .date{
+    z-index:100000;
+}
+
+#cy {
+    height: 600px;
+    background-color: #f9f9f9;
+    display: block;
+}
+
+.table.table-hover>tbody>tr:hover {
+    background-color: #939391 !important;
+}
+
+.a {
+    color:white;
+}
+
+
+.my-legend .legend-scale ul li {
+    font-size: 100%;
+    list-style: none;
+    /*margin-left: 0;*/
+    line-height: 18px;
+    margin-bottom: 2px;
+    color:white;
+    margin-left: 20px;
+}
+
+.my-legend ul li span {
+    display: inline-block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 1px solid #999;
+}
+
+
+

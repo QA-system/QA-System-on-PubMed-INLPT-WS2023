@@ -1,0 +1,48 @@
+body{
+    background:url(../imgs/star.jpg) no-repeat center 0px;
+	background-size: cover;
+
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+     -o-background-size: cover;
+     -moz-background-size: cover;
+     -ms-background-size: cover;
+    /*background:#f3f3f3;*/
+    font-family: "å¾®è½¯éé»","arial";
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.main{
+    background: rgba(255,255,255,0.2);
+    margin-top: 100px;
+    margin-left: 200px;
+    /*background: #fff;*/
+    width: 1600px;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+}
+.page-title{
+   text-align: center;
+}
+
+.collapse{
+    text-align: center;
+    padding-left: 200px;
+}
+.nav {
+    padding-right: 200px;
+}
+
+
+.nav.nav>li>a:focus, .nav.nav>li>a:hover{
+    background-color:rgba(255,255,255,0.2) !important;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+    color:#77AAAD;
+}

@@ -1,0 +1,16 @@
+.navbar-form {
+   background:rgba(255,255,255,0.2);
+   text-align: center;
+   padding-top: 50px;
+   padding-bottom: 50px;
+}
+.form-group{
+   padding-top: 20px;
+}
+
+.table.table-hover>tbody>tr:hover {
+    background-color: #939391 !important;
+}
+
+
+
