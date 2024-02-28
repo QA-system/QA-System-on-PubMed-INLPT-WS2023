@@ -5,6 +5,10 @@ from __future__ import unicode_literals
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
 
+import sys
+sys.path.insert(0, sys.path[0]+"/../")
+from answer_generation.model_utils import question_answer
+import hashlib
 
 import logging
 
@@ -33,14 +37,21 @@ class Getanswer(Resource):
         
         question = args['question']
 
-        answer = 'No result, testing'
-        m= {'question':question,'answer':answer,'generated_qa_id':'123'}
+        answer = self.get_answer(question)
+
+        qa_pair = f'{question} {answer}'
+        qa_id = hashlib.sha256(qa_pair.encode('utf-8')).hexdigest()   
+        
+        m= {'question':question,'answer':answer,'qa_id': qa_id}
         return json.dumps(m, ensure_ascii=False)
+
 
     def get(self):
         return json.dumps({}, ensure_ascii=False)
     
-        
+    def get_answer(self, question):
+        answer = question_answer(question)
+        return answer
 
 api.add_resource(Getanswer, '/answer_search/')
 
