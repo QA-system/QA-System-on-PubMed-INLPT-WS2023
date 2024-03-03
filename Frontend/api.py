@@ -7,7 +7,7 @@ from flask_restful import Resource, Api, reqparse
 
 import sys
 sys.path.insert(0, sys.path[0]+"/../")
-from answer_generation.model_utils import question_answer
+from answer_generation.model_utils import question_answer, rag_full_pipe
 import hashlib
 
 import logging
@@ -30,6 +30,11 @@ app.logger.addHandler(handler)
 
 
 class Getanswer(Resource):
+    def __init__(self) -> None:
+        super().__init__()
+        rag_pipeline = rag_full_pipe()
+
+
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('question', type=str, required=True)
@@ -50,8 +55,9 @@ class Getanswer(Resource):
         return json.dumps({}, ensure_ascii=False)
     
     def get_answer(self, question):
-        answer = question_answer(question)
-        return answer
+        # answer = question_answer(question)
+        result = self.rag_pipeline(question)['result']
+        return result
 
 api.add_resource(Getanswer, '/answer_search/')
 
