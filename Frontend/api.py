@@ -7,13 +7,15 @@ from flask_restful import Resource, Api, reqparse
 
 import sys
 sys.path.insert(0, sys.path[0]+"/../")
-from answer_generation.model_utils import question_answer, rag_full_pipe
+# from answer_generation.model_utils import question_answer, rag_full_pipe
 import hashlib
 
 import logging
 
 import json
 import settings as settings
+import pandas as pd
+import os
 
 
 app = Flask(__name__)
@@ -32,7 +34,7 @@ app.logger.addHandler(handler)
 class Getanswer(Resource):
     def __init__(self) -> None:
         super().__init__()
-        rag_pipeline = rag_full_pipe()
+        # rag_pipeline = rag_full_pipe()
 
 
     def post(self):
@@ -55,9 +57,19 @@ class Getanswer(Resource):
         return json.dumps({}, ensure_ascii=False)
     
     def get_answer(self, question):
-        # answer = question_answer(question)
-        result = self.rag_pipeline(question)['result']
-        return result
+
+        last_path = os.getcwd()
+        file_path = f"{last_path}/result/QA.xlsx"
+        df = pd.read_excel(file_path,engine='openpyxl')
+        result = df['query'][df['query'].isin([question.replace('\r','').replace('\n','').strip()])]
+        if len(result)>0:
+            ind =result.index.tolist()
+            answer = df['result'][ind[0]]
+            # answer = question_answer(question)
+            # answer = self.rag_pipeline(question)['result']
+            return answer
+        else:
+            return 'There is no answer available.'
 
 api.add_resource(Getanswer, '/answer_search/')
 

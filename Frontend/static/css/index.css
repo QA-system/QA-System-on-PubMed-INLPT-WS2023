@@ -6,6 +6,19 @@
 }
 .form-group{
    padding-top: 20px;
+   text-align: center;
+}
+.question {
+   border: none;
+   text-align: center;
+   width: 800px;
+   max-height: 600px;
+   overflow: auto;
+   word-break: break-all;
+   resize: none;
+}
+.question:focus {
+   outline: none;
 }
 
 .table.table-hover>tbody>tr:hover {

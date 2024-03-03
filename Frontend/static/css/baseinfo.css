@@ -19,6 +19,15 @@ h3{
 
 .table.table-hover>tbody>tr:hover {
     background-color: #939391 !important;
+    height: 100px;
+    width: 200px;
+    font-size: large;
+}
+
+.table.table-hover>tbody>tr{
+    height: 100px;
+    width: 200px;
+    font-size:larger;
 }
 
 .a {
@@ -39,8 +48,8 @@ h3{
 .my-legend ul li span {
     display: inline-block;
     float: left;
-    height: 16px;
-    width: 30px;
+    height: 32px;
+    width: 60px;
     margin-right: 5px;
     margin-left: 5px;
     border: 1px solid #999;
