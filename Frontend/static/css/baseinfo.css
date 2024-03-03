@@ -21,13 +21,12 @@ h3{
     background-color: #939391 !important;
     height: 100px;
     width: 200px;
-    font-size: large;
 }
 
 .table.table-hover>tbody>tr{
     height: 100px;
     width: 200px;
-    font-size:larger;
+    font-size:x-large;
 }
 
 .a {
