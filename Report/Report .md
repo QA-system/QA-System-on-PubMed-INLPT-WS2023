@@ -198,6 +198,11 @@ To complement our manual evaluation, we employed automated metrics, including BE
     
 -   BLEU and ROUGE: Showed less favorable outcomes, with BLEU at 0.0713 and ROUGE (Rouge1: 0.2817, Rouge2: 0.1223, RougeL: 0.2083). These metrics, particularly BLEU, suggest a lower level of lexical overlap and n-gram precision with the reference texts. This discrepancy can be attributed to the nature of our queries and responses, which may not align perfectly with the literal expressions found in reference materials, highlighting the limitations of BLEU and ROUGE in evaluating semantic coherence and relevance in complex domains.
 
+| :----:| :----: |
+| Precision | 0.864812 |
+| Recall | 0.882231 |
+| F1-Score| 0.873219 |
+
 #### User Interface Performance
 
 The deployment of our user interface marked a significant milestone in our project, offering a practical and interactive platform for real-world testing and user engagement. Through this interface, users can input questions and receive generated answers, allowing us to collect valuable feedback on the system's performance in live scenarios.
