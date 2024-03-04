@@ -9,8 +9,8 @@
 |-----|-------|-----|-----|---|
 |Qiaowen Hu|3751395            |qiaowen.hu@stud.uni-heidelberg.de |Scietific Computing| Data collection; RAG pipeline: tokenization+text retrieval+text generation+QA chain, which supports facet search, semantic search and lexicographical search; Evaluation: automatic metrics evaluation(bleu+rouge+bertscore) |
 |Xiaoqing Cai |3701830     |xiaoqing.cai@stud.uni-heidelberg.de     |Scietific Computing|Transformers models training with automatic qa pairs generation (with openai) and evaluation, Frontend construction, Backend API construction for communicating between models and frontend|
-|Binwu Wang          |3704880|binwu.wang@stud.uni-heidelberg.de|Scietific Computing|QA pairs generation, Frontend construction,  Model Evaluation, Report Writing|
-|Wenzhuo Chen          |3751592|wenzhuo.chen@stud.uni-heidelberg.de|Data and Computer Science| Data collection; Manual Evaluation; Report Writing(Experimental setup and Results)|
+|Binwu Wang          |3704880|binwu.wang@stud.uni-heidelberg.de|Scietific Computing|QA pairs generation, Frontend construction, Model training and evaluation, Report writing|
+|Wenzhuo Chen          |3751592|wenzhuo.chen@stud.uni-heidelberg.de|Data and Computer Science| Data collection; lexicographical search; Manual Evaluation(question generation and generated answer verification manually); Report writing(Experimental setup and Results)|
 
 
 
@@ -37,14 +37,14 @@ The proposed question-answering system is designed to efficiently navigate the v
 <center>
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="/Report/222121709508307_.pic.jpg">
+    src="/Report/Pics/222121709508307_.pic.jpg">
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
     padding: 2px;">Figure 1. Workflow of the Question Answering System</div>
 </center>
-
+&nbsp;
 
 The user inputs a natural language query into the system. The retrieval system, utilizing BM25 and semantic search, identifies and retrieves relevant PubMed documents. Subsequently, the LLaMA2 model processes both the query and retrieved documents to generate a precise and informative answer. Finally, the generated answer is presented to the user, offering valuable insights derived from the extensive PubMed literature.
 
@@ -180,14 +180,14 @@ Our manual evaluation process involved categorizing the generated responses into
 <center>
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="/Report/18371709541289_.pic.jpg">
+    src="/Report/Pics/18371709541289_.pic.jpg">
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
     padding: 2px;">Figure 2. Distribution of Response Quality </div>
 </center>
-
+&nbsp;
 This segmentation reveals a promising trend: a significant majority (63%) of the responses were classified as high quality, indicating a strong capability of our system to generate relevant and accurate answers. However, the presence of 19% in the low-quality category suggests there is room for improvement, particularly in understanding and processing complex queries or niche topics.
 
 #### Automated Evaluation: Metric-Based Analysis
@@ -205,14 +205,14 @@ The deployment of our user interface marked a significant milestone in our proje
 <center>
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="/Report/18791709548672_.pic_hd.jpg">
+    src="/Report/Pics/18791709548672_.pic_hd.jpg">
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
     padding: 2px;">Figure 3. User Interface </div>
 </center>
-
+&nbsp;
 The interface's ability to consistently produce coherent and contextually relevant responses underscores the practical utility of our system. User feedback has been overwhelmingly positive, with particular praise for the system's responsiveness and the quality of the answers, reinforcing the findings of our manual and automated evaluations.
 
 ### Discussion
@@ -225,7 +225,7 @@ The positive reception of our user interface further validates the practical app
 
 ### Analysis
 
-The system has demonstrated a high degree of competence in generating responses that are semantically aligned with the users' inquiries, as evidenced by the 63% rate of high-quality responses in the manual evaluation and the strong BERTScore metrics. These outcomes suggest that the model is well-optimized for understanding and processing complex textual information, a critical requirement for our domain of focus.
+The system has demonstrated a high degree of competence in generating responses that are semantically aligned with the users' inquiries, as demonstrated by the 81% of responses rated as moderate to high quality in the manual evaluation, along with strong BERTScore metrics. These outcomes suggest that the model is well-optimized for understanding and processing complex textual information, a critical requirement for our domain of focus.
 
 Qualitative analysis of the system's outputs reveals consistent success in handling queries that require deep contextual understanding and the synthesis of information across multiple sources. This is particularly evident in the system's ability to provide comprehensive, nuanced answers to questions involving explanations or definitions, where it leverages its semantic understanding capabilities to generate informative and accurate responses.
 
@@ -235,23 +235,25 @@ The disparity in performance across different types of queries can be further il
 <center>
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="/Report/1709545834.jpg">
+    src="/Report/Pics/1709545834.jpg">
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
     padding: 2px;">Figure 4. Results of good performance  </div>
 </center>
+&nbsp;
 <center>
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="/Report/18391709541630_.pic_hd.jpg">
+    src="/Report/Pics/18391709541630_.pic_hd.jpg">
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
     padding: 2px;">Figure 5. Results of poor performance </div>
 </center>
+&nbsp;
 This pattern is underscored by our evaluation metrics, where the high BERTScore indicates strong semantic alignment in the system's responses, suggesting that when the system can answer, it does so with high relevance and accuracy. However, the absence of responses to specific factual inquiries points to a need for enhanced data linkage or retrieval capabilities.
 
 ## Conclusion and future work
