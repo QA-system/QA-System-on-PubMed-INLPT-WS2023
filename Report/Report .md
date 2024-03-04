@@ -85,7 +85,7 @@ The manual evaluation involves a human-centric review process where generated an
 
 >**Automated Evaluation Metrics**
 
-In addition to manual evaluation, we incorporate automated metrics to objectively assess the quality of the generated text. The evaluation dataset is derived from PubMedQA, focusing on 187 QA pairs where the context includes the keyword "intelligence." This subset aims to evaluate the model's capability in extracting and synthesizing knowledge from medical literature.
+In addition to manual evaluation, we incorporate automated metrics to objectively assess the quality of the generated text. The evaluation dataset is derived from [PubMedQA](https://pubmedqa.github.io/), focusing on 187 QA pairs where the context includes the keyword "intelligence." This subset aims to evaluate the model's capability in extracting and synthesizing knowledge from medical literature.
 
 - **BLEU Score:** The BLEU (Bilingual Evaluation Understudy) score is utilized to measure the precision of the generated text against reference answers. By calculating the overlap of n-grams between the generated answers and the reference texts, BLEU provides a quantifiable measure of textual similarity, with an emphasis on precision for n=4.
 
@@ -168,6 +168,8 @@ Through this integrated approach, we not only illustrated the technical details 
 
 Our manual evaluation process involved categorizing the generated responses into three distinct quality tiers: high, medium, and low. The distribution of these categories is visually represented in a pie chart, as shown below:
 
+![Distribution of Response Quality](/Report/18371709541289_.pic.jpg)
+<center style="font-size:14px;color:#C0C0C0;text-decoration:underline"> Figure 2. Distribution of Response Quality </center>
 
 This segmentation reveals a promising trend: a significant majority (63%) of the responses were classified as high quality, indicating a strong capability of our system to generate relevant and accurate answers. However, the presence of 19% in the low-quality category suggests there is room for improvement, particularly in understanding and processing complex queries or niche topics.
 
@@ -182,6 +184,9 @@ To complement our manual evaluation, we employed automated metrics, including BE
 #### User Interface Performance
 
 The deployment of our user interface marked a significant milestone in our project, offering a practical and interactive platform for real-world testing and user engagement. Through this interface, users can input questions and receive generated answers, allowing us to collect valuable feedback on the system's performance in live scenarios.
+
+![User Interface](/Report/18391709541630_.pic_hd.jpg)
+<center style="font-size:14px;color:#C0C0C0;text-decoration:underline"> Figure 3. User Interface </center>
 
 The interface's ability to consistently produce coherent and contextually relevant responses underscores the practical utility of our system. User feedback has been overwhelmingly positive, with particular praise for the system's responsiveness and the quality of the answers, reinforcing the findings of our manual and automated evaluations.
 
@@ -200,8 +205,6 @@ The system has demonstrated a high degree of competence in generating responses 
 Qualitative analysis of the system's outputs reveals consistent success in handling queries that require deep contextual understanding and the synthesis of information across multiple sources. This is particularly evident in the system's ability to provide comprehensive, nuanced answers to questions involving explanations or definitions, where it leverages its semantic understanding capabilities to generate informative and accurate responses.
 
 Despite the overall success, our system does exhibit certain limitations, most notably in its handling of queries that require specific factual information, such as authorship questions (e.g., "Who is the author of xxxx?"). In these cases, the system often responds with "No answer available," indicating a gap in its ability to retrieve and present discrete factual data. This limitation suggests an area for targeted improvement, possibly through the integration of a more robust factual retrieval component or the enhancement of its knowledge base.
-
-While we did not establish a traditional baseline model for direct comparison, insights can still be drawn from the general performance trends observed in similar systems within the literature. Compared to systems that rely heavily on direct factual retrieval from structured databases, our approach, which emphasizes semantic understanding and contextual relevance, shows a distinct advantage in generating coherent and contextually rich responses. However, the observed challenges in answering specific factual queries highlight a complementary relationship, suggesting that an ideal system might combine the strengths of both semantic processing and direct data retrieval methodologies.
 
 The disparity in performance across different types of queries can be further illustrated by examining the system's response patterns. For example, in responding to "Can radiation therapy treat cancer?," our system can successfully aggregate and synthesize information to provide a detailed and accurate explanation. In contrast, for "Who is the author of Using perioperative analytics to optimize OR performance?", it fails to provide a direct answer, reflecting the aforementioned limitation in handling factual retrieval-focused queries.
 
