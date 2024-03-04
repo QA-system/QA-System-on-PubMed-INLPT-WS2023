@@ -1,4 +1,4 @@
-# Project: QA System based on PubMed
+# Project: Medical Domain Question Answering System based on RAG
 **Group members:**  
 Xiaoqin Cai: [@xiaoqingcai99](https://github.com/xiaoqingcai99)    
 Qiaowen Hu: [@QiaoqiaoHW](https://github.com/QiaoqiaoHW)  
