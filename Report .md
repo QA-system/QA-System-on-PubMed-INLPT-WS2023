@@ -5,9 +5,9 @@
 | Name |Matrikel-Nr  |Email|Course of study| Contributions |
 |-----|-------|-----|-----|---|
 |Qiaowen Hu|3751395            |qiaowen.hu@stud.uni-heidelberg.de |Scietific Computing| Data collection; RAG pipeline: tokenization+text retrieval+text generation+QA chain, which supports facet search, semantic search and lexicographical search; Evaluation: automatic metrics evaluation(bleu+rouge+bertscore) |
-|Xiaoqing Cai |`"Isn't this fun?"`            |"Isn't this fun?"            |Scietific Computing||
+|Xiaoqing Cai |||Scietific Computing||
 |Binwu Wang          |3704880|binwu.wang@stud.uni-heidelberg.de|Scietific Computing||
-|Wenzhuo Chen          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|Scietific Computing||
+|Wenzhuo Chen          ||||
 
 **Advisor**:  Ashish Chouhan
 
