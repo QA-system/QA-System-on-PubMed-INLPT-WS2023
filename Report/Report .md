@@ -209,6 +209,7 @@ This pattern is underscored by our evaluation metrics, where the high BERTScore 
 
 ## Conclusion and future work
 
+This project demonstrates the significant potential of Retrieval-Augmented Generation (RAG) technology in enhancing the capabilities of medical domain question-answering systems. By integrating RAG, we have successfully addressed the limitations associated with traditional Large Language Models (LLMs), particularly in terms of accessing up-to-date and domain-specific knowledge. The use of RAG has enabled our system to not only generate responses that are more accurate and contextually relevant but also to extend the breadth of its knowledge base by leveraging external data sources like the PubMed literature database. This approach has markedly improved the efficiency, precision, and credibility of information retrieval, showcasing RAG's pivotal role in advancing the field of natural language processing within the medical domain. Moving forward, the promising results obtained underscore the importance of further exploration and refinement of RAG-based methodologies to bolster the performance of question-answering systems in handling the complex and nuanced demands of medical literature.
 
 We plan to further refine our evaluation by:
 
