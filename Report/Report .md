@@ -1,8 +1,8 @@
 ﻿# Medical Domain Question Answering System based on RAG
 
-**Group 16**
+-**Group 16**
 **Team Members**
-      **Advisor**:  Ashish Chouhan
+- **Advisor**:  Ashish Chouhan
 | Name |Matrikel-Nr  |Email|Course of study| Contributions |
 |-----|-------|-----|-----|---|
 |Qiaowen Hu|3751395            |qiaowen.hu@stud.uni-heidelberg.de |Scietific Computing| Data collection; RAG pipeline: tokenization+text retrieval+text generation+QA chain, which supports facet search, semantic search and lexicographical search; Evaluation: automatic metrics evaluation(bleu+rouge+bertscore) |
@@ -10,7 +10,6 @@
 |Binwu Wang          |3704880|binwu.wang@stud.uni-heidelberg.de|Scietific Computing|QA pairs generation, Frontend construction,  Model Evaluation, Report Writing|
 |Wenzhuo Chen          |3751592|wenzhuo.chen@stud.uni-heidelberg.de|Data and Computer Science|Report Writing(Experimental setup and Results)；Manual Evaluation; Data collection|
 
-**Advisor**:  Ashish Chouhan
 
 
 ## Introduction
