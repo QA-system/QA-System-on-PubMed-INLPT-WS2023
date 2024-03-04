@@ -188,6 +188,7 @@ Our manual evaluation process involved categorizing the generated responses into
     padding: 2px;">Figure 2. Distribution of Response Quality </div>
 </center>
 &nbsp;
+
 This segmentation reveals a promising trend: a significant majority (63%) of the responses were classified as high quality, indicating a strong capability of our system to generate relevant and accurate answers. However, the presence of 19% in the low-quality category suggests there is room for improvement, particularly in understanding and processing complex queries or niche topics.
 
 #### Automated Evaluation: Metric-Based Analysis
@@ -213,6 +214,7 @@ The deployment of our user interface marked a significant milestone in our proje
     padding: 2px;">Figure 3. User Interface </div>
 </center>
 &nbsp;
+
 The interface's ability to consistently produce coherent and contextually relevant responses underscores the practical utility of our system. User feedback has been overwhelmingly positive, with particular praise for the system's responsiveness and the quality of the answers, reinforcing the findings of our manual and automated evaluations.
 
 ### Discussion
@@ -243,6 +245,7 @@ The disparity in performance across different types of queries can be further il
     padding: 2px;">Figure 4. Results of good performance  </div>
 </center>
 &nbsp;
+
 <center>
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
@@ -254,6 +257,7 @@ The disparity in performance across different types of queries can be further il
     padding: 2px;">Figure 5. Results of poor performance </div>
 </center>
 &nbsp;
+
 This pattern is underscored by our evaluation metrics, where the high BERTScore indicates strong semantic alignment in the system's responses, suggesting that when the system can answer, it does so with high relevance and accuracy. However, the absence of responses to specific factual inquiries points to a need for enhanced data linkage or retrieval capabilities.
 
 ## Conclusion and future work
