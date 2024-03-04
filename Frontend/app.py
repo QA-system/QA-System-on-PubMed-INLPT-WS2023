@@ -64,16 +64,20 @@ def index():
 
     else:
         question = request.form.get('question')
+        start_date = request.form.get('trip-start')
+        end_date = request.form.get('trip-end')
         # check illegal character
         question_str = str(question)
+
         if question_str == '':
             return render_template('index.html')
        
-        result_basic = requests.post('http://127.0.0.1'+interface_url+'answer_search/', json={'question': question}).json()
+        result_basic = requests.post('http://127.0.0.1'+interface_url+'answer_search/', 
+                                     json={'question': question, 'start': start_date, 'end': end_date}).json()
         result_basic = json.loads(result_basic)
         print(result_basic)
         if result_basic['answer'] == None:
-            err = 'Illegal question, please retry'
+            err = 'Illegal date, please retry'
             return render_template('index.html', msg=err)
         session['question_session'] = question_str
         return render_template('basic.html', **result_basic)

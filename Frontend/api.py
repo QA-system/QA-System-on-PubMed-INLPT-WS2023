@@ -16,7 +16,7 @@ import json
 import settings as settings
 import pandas as pd
 import os
-
+from datetime import datetime
 
 app = Flask(__name__)
 api = Api(app)
@@ -32,19 +32,18 @@ app.logger.addHandler(handler)
 
 
 class Getanswer(Resource):
-    def __init__(self) -> None:
-        super().__init__()
-        # rag_pipeline = rag_full_pipe()
-
-
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('question', type=str, required=True)
+        parser.add_argument('start', type=str, required=True)
+        parser.add_argument('end', type=str, required=True)
         args = parser.parse_args()
         
         question = args['question']
+        start_date = args['start']
+        end_date = args['end']
 
-        answer = self.get_answer(question)
+        answer = self.get_answer(question, start_date, end_date)
 
         qa_pair = f'{question} {answer}'
         qa_id = hashlib.sha256(qa_pair.encode('utf-8')).hexdigest()   
@@ -56,17 +55,20 @@ class Getanswer(Resource):
     def get(self):
         return json.dumps({}, ensure_ascii=False)
     
-    def get_answer(self, question):
-
+    def get_answer(self, question, start_date, end_date):
+        if datetime.strptime(start_date,'%Y-%m-%d')>datetime.strptime(end_date,'%Y-%m-%d'):
+            return None
+        start_date = start_date.replace('-', '/')
+        end_date = end_date.replace('-', '/')
         last_path = os.getcwd()
-        file_path = f"{last_path}/result/QA.xlsx"
+        file_path = f"{last_path}/Frontend/QA_mock_data.xlsx"
         df = pd.read_excel(file_path,engine='openpyxl')
         result = df['query'][df['query'].isin([question.replace('\r','').replace('\n','').strip()])]
         if len(result)>0:
             ind =result.index.tolist()
             answer = df['result'][ind[0]]
             # answer = question_answer(question)
-            # answer = self.rag_pipeline(question)['result']
+            # answer = rag_full_pipe(start_date, end_date, question)['result']
             return answer
         else:
             return 'There is no answer available.'

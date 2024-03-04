@@ -149,7 +149,7 @@ def semantic_search(data, filtered_docs):
                                        weights=[0.5,0.5])
     return ensemble_retriever
     
-def facet_search(docs, arg):
+def facet_search(docs, start_date:str='2013/01/01', end_date: str='2023/01/01'):
     author = 'Hamrouni K'
     start_date = '2013/01/01'
     end_date = '2023/01/01'
@@ -203,11 +203,11 @@ def generate_rag_pipeline(model, tokenizer, ensemble_retriever):
     )
     return rag_pipeline
 
-def rag_full_pipe(query:str = 'What are the three successive steps involved in the novel mass detection process described for identifying breast abnormalities on mammographic images, according to the paper?'):
+def rag_full_pipe(start_date, end_date, query:str = 'What are the three successive steps involved in the novel mass detection process described for identifying breast abnormalities on mammographic images, according to the paper?'):
     docs = load_dataset()
     tokenizer = get_tokenizer()
     data = dataset_processing(docs)
-    filtered_docs = facet_search(docs)
+    filtered_docs = facet_search(docs, start_date, end_date)
     ensemble_retriever = semantic_search(data, filtered_docs)
     rag_model = get_rag_model()
     rag_pipeline = generate_rag_pipeline(rag_model, tokenizer, ensemble_retriever)
