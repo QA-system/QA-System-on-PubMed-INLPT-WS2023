@@ -125,6 +125,9 @@ For the embedding phase, the sentence-transformers/all-MiniLM-L6-v2 model was se
 
 In document retrieval, a combination of semantic and lexical search methods was implemented. The Chroma and BM25Retriever were used to facilitate these strategies, aimed at improving the accuracy and relevance of document retrieval. Notably, we employed vector-based similarity searches and traditional text retrieval via BM25, adjusting their weights (0.5 each) to optimize retrieval outcomes.
 
+Faceted Search Implementation:
+To further refine our document retrieval capabilities, we introduced faceted search features, enabling targeted searches by keyword, author, and a specified time range (from-to dates). This approach is designed to support more precise information discovery, catering to users' specific search intents.
+
 >#### Text Generation and Question Answering：
 
 During text generation, the specially configured meta-llama/Llama-2-13b-chat-hf model was deployed, utilizing the transformers library's BitsAndBytesConfig for model quantization. This aimed to optimize performance, reduce memory usage while maintaining text quality. The model configuration employed 4-bit quantization and bfloat16 data types, aiding in efficient model operation without sacrificing output quality.
