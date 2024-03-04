@@ -205,7 +205,7 @@ The deployment of our user interface marked a significant milestone in our proje
 <center>
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="/Report/18391709541630_.pic_hd.jpg">
+    src="/Report/18641709546841_.pic_hd.jpg">
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
@@ -232,7 +232,26 @@ Qualitative analysis of the system's outputs reveals consistent success in handl
 Despite the overall success, our system does exhibit certain limitations, most notably in its handling of queries that require specific factual information, such as authorship questions (e.g., "Who is the author of xxxx?"). In these cases, the system often responds with "No answer available," indicating a gap in its ability to retrieve and present discrete factual data. This limitation suggests an area for targeted improvement, possibly through the integration of a more robust factual retrieval component or the enhancement of its knowledge base.
 
 The disparity in performance across different types of queries can be further illustrated by examining the system's response patterns. For example, in responding to "Can radiation therapy treat cancer?," our system can successfully aggregate and synthesize information to provide a detailed and accurate explanation. In contrast, for "Who is the author of Using perioperative analytics to optimize OR performance?", it fails to provide a direct answer, reflecting the aforementioned limitation in handling factual retrieval-focused queries.
-
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="/Report/1709545834.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Figure 4. Results of good performance  </div>
+</center>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="/Report/18391709541630_.pic_hd.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Figure 5. Results of poor performance </div>
+</center>
 This pattern is underscored by our evaluation metrics, where the high BERTScore indicates strong semantic alignment in the system's responses, suggesting that when the system can answer, it does so with high relevance and accuracy. However, the absence of responses to specific factual inquiries points to a need for enhanced data linkage or retrieval capabilities.
 
 ## Conclusion and future work
