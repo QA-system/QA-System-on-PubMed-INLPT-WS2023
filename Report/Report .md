@@ -34,6 +34,18 @@ Despite the strides made in RAG-based medical question answering, the phenomenon
 ### Overview
 The proposed question-answering system is designed to efficiently navigate the vast expanse of medical literature available in the PubMed database, providing users with accurate and relevant information in response to their queries. The system combines advanced natural language processing (NLP) techniques with retrieval-augmented generation (RAG) technology to enhance the accuracy and relevance of its responses. This section outlines the methodology employed, including the dual-retrieval approach and the integration of a large language model (LLM) for answer generation.
 
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="/Report/222121709508307_.pic.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Figure 1. Workflow of the Question Answering System</div>
+</center>
+
+
 ![workflow](/Report/222121709508307_.pic.jpg)
 <center style="font-size:14px;color:#C0C0C0;text-decoration:underline"> Figure 1. Workflow of the Question Answering System </center>
 
