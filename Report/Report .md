@@ -46,9 +46,6 @@ The proposed question-answering system is designed to efficiently navigate the v
 </center>
 
 
-![workflow](/Report/222121709508307_.pic.jpg)
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline"> Figure 1. Workflow of the Question Answering System </center>
-
 The user inputs a natural language query into the system. The retrieval system, utilizing BM25 and semantic search, identifies and retrieves relevant PubMed documents. Subsequently, the LLaMA2 model processes both the query and retrieved documents to generate a precise and informative answer. Finally, the generated answer is presented to the user, offering valuable insights derived from the extensive PubMed literature.
 
 
@@ -180,8 +177,16 @@ Through this integrated approach, we not only illustrated the technical details 
 
 Our manual evaluation process involved categorizing the generated responses into three distinct quality tiers: high, medium, and low. The distribution of these categories is visually represented in a pie chart, as shown below:
 
-![Distribution of Response Quality](/Report/18371709541289_.pic.jpg)
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline"> Figure 2. Distribution of Response Quality </center>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="/Report/18371709541289_.pic.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Figure 2. Distribution of Response Quality </div>
+</center>
 
 This segmentation reveals a promising trend: a significant majority (63%) of the responses were classified as high quality, indicating a strong capability of our system to generate relevant and accurate answers. However, the presence of 19% in the low-quality category suggests there is room for improvement, particularly in understanding and processing complex queries or niche topics.
 
@@ -197,8 +202,16 @@ To complement our manual evaluation, we employed automated metrics, including BE
 
 The deployment of our user interface marked a significant milestone in our project, offering a practical and interactive platform for real-world testing and user engagement. Through this interface, users can input questions and receive generated answers, allowing us to collect valuable feedback on the system's performance in live scenarios.
 
-![User Interface](/Report/18391709541630_.pic_hd.jpg)
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline"> Figure 3. User Interface </center>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="/Report/18391709541630_.pic_hd.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Figure 3. User Interface </div>
+</center>
 
 The interface's ability to consistently produce coherent and contextually relevant responses underscores the practical utility of our system. User feedback has been overwhelmingly positive, with particular praise for the system's responsiveness and the quality of the answers, reinforcing the findings of our manual and automated evaluations.
 
