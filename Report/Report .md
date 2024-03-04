@@ -228,3 +228,11 @@ We plan to further refine our evaluation by:
 [Yasunaga, M., Koncel-Kedziorski, R., Neves, L. A., & Wallace, B. C. (2022a). "Big Bird: Transformers for Longer Sequences." arXiv preprint arXiv:2207.14589.](https://arxiv.org/abs/2007.14062)
 
 [Lewis, M., Liu, Y., Goyal, N., Ghazvininejad, M., Mohamed, A., Levy, O., & Zettlemoyer, L. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." arXiv preprint arXiv:2005.11401.](https://arxiv.org/abs/2005.11401)
+
+[Singhal, K., Azizi, S., Tu, T., Mahdavi, S. S., Wei, J., Chung, H. W., ... & Natarajan, V. (2022). Large language models encode clinical knowledge. arXiv preprint arXiv:2212.13138.](https://doi.org/10.48550/arXiv.2212.13138)
+
+[Zhang, H., Chen, J., Jiang, F., Yu, F., Chen, Z., Li, J., ... & Li, H. (2023). HuatuoGPT, towards Taming Language Model to Be a Doctor. arXiv preprint arXiv:2305.15075.](https://doi.org/10.48550/arXiv.2305.15075)
+
+[Min, S., Shi, W., Lewis, M., Chen, X., Yih, W. T., Hajishirzi, H., & Zettlemoyer, L. (2022). Nonparametric masked language modeling. arXiv preprint arXiv:2212.01349.](https://doi.org/10.48550/arXiv.2212.01349)
+
+[Chen, Z., Cano, A. H., Romanou, A., Bonnet, A., Matoba, K., Salvi, F., ... & Bosselut, A. (2023). Meditron-70b: Scaling medical pretraining for large language models. arXiv preprint arXiv:2311.16079.](https://doi.org/10.48550/arXiv.2311.16079)
