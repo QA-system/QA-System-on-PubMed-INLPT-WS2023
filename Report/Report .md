@@ -44,6 +44,7 @@ E[Massive Text Corpus] --Pretraining--> C
 C --Response--> A
 ```
 The user inputs a natural language query into the system. The retrieval system, utilizing BM25 and semantic search, identifies and retrieves relevant PubMed documents. Subsequently, the LLaMA2 model processes both the query and retrieved documents to generate a precise and informative answer. Finally, the generated answer is presented to the user, offering valuable insights derived from the extensive PubMed literature.
+![workflow](Report/222121709508307_.pic.jpg)
 
 
 >#### RAG
